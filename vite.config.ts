@@ -10,7 +10,6 @@ export default defineConfig({
   base: ((process.env.GITHUB_REPOSITORY ?? "") + "/").match(/(\/.*)/)?.[1],
   optimizeDeps: {
     exclude: [
-      "@syntect/wasm"
     ]
   },
   worker: {
@@ -18,5 +17,15 @@ export default defineConfig({
       wasm(),
       topLevelAwait()
     ]
+  },
+  build: {
+    rollupOptions: {
+      external: [
+        'public/wasm_exec.js'
+      ],
+      input: {
+        //index: 'index.html'
+      }
+    }
   }
 });

@@ -8,8 +8,10 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="wasm_exec.js"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <!--
+    <script type="module" src="wasm_exec.js"></script>
+
     <script>
       // Polyfill
       if (!WebAssembly.instantiateStreaming) {
@@ -23,6 +25,6 @@
       WebAssembly.instantiateStreaming(fetch("mygame.wasm"), go.importObject).then(result => {
           go.run(result.instance);
       });
-      </script>
+      </script>-->
   </body>
 </html>
