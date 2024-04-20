@@ -12,7 +12,7 @@ const queryClient = new QueryClient({
 });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <TonConnectUIProvider manifestUrl={manifestUrl}>
+  <TonConnectUIProvider manifestUrl={manifestUrl}>u
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>

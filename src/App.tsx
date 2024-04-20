@@ -8,6 +8,8 @@ import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
+import init from "./wasm/mygame.wasm";
+import { useEffect } from "react";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -28,6 +30,16 @@ const AppContainer = styled.div`
 
 function App() {
   const { network } = useTonConnect();
+
+  useEffect(() => {
+    const loadWasm = async () => {
+      const wasmModule = await init();
+      wasmModule.MyWasmFunction();
+    };
+
+    loadWasm();
+  }, []);
+
 
   return (
     <StyledApp>
