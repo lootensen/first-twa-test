@@ -43,9 +43,9 @@ The project is highly-opinionated, and there are many other alternate routes it 
 1. Run `npm run dev` and edit the code as needed
 2. On push to the `main` branch, the app will be automatically deployed via github actions.
 
-# Roadmap
+# Notes
 
-- [ ] Jetton transfer support
+https://docs.ton.org/develop/get-started-with-ton
 
 # License
 
